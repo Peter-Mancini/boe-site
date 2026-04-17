@@ -3,244 +3,521 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="robots" content="index, follow" />
-  <title>BOE — Privacy Policy</title>
+  <meta name="description" content="BOE — The fastest way to screen multifamily real estate deals. Levered IRR, equity multiple, DSCR, and cash flows in seconds." />
+  <meta name="theme-color" content="#0f1f3d" />
+  <title>BOE — Back of Envelope</title>
   <style>
     :root {
       --navy: #0f1f3d;
       --navy-mid: #1a3060;
+      --navy-light: #2d4a80;
+      --navy-fade: rgba(15,31,61,0.06);
+      --navy-ghost: rgba(15,31,61,0.03);
+      --text: #0f1f3d;
       --text-mid: #4a5578;
       --text-dim: #8b93a8;
       --border: #e2e5ed;
       --border-light: #eceef3;
       --bg: #ffffff;
       --bg-alt: #f6f7fa;
+      --serif: Georgia, "Times New Roman", "Libre Caslon Display", serif;
+      --sans: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "DM Sans", Arial, sans-serif;
+      --mono: ui-monospace, "SF Mono", "IBM Plex Mono", Menlo, Consolas, monospace;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html, body {
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      color: var(--text);
       background: var(--bg);
-      color: var(--navy);
-      font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      font-size: 16px;
-      line-height: 1.6;
       -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
     }
 
-    main {
-      max-width: 680px;
+    /* ── Layout ── */
+    .container {
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 64px 24px 96px;
+      padding: 0 32px;
     }
 
-    .brand {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 28px;
-      letter-spacing: -0.5px;
-      color: var(--navy);
-    }
-    .brand-tag {
-      font-size: 10px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: var(--text-dim);
-      margin-top: 2px;
+    section {
+      padding: 96px 0;
     }
 
-    .meta {
+    /* ── Nav ── */
+    nav {
+      padding: 28px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
       display: flex;
       justify-content: space-between;
-      align-items: baseline;
-      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-      font-size: 11px;
+      align-items: center;
+    }
+    .nav-mark {
+      font-family: var(--serif);
+      font-size: 22px;
+      color: var(--navy);
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+    .nav-tag {
+      font-family: var(--mono);
+      font-size: 10px;
       color: var(--text-dim);
       text-transform: uppercase;
-      letter-spacing: 1.2px;
-      margin-top: 24px;
-      padding-bottom: 16px;
-      border-bottom: 2px solid var(--navy);
+      letter-spacing: 2px;
     }
 
-    h1 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 40px;
-      line-height: 1.15;
+    /* ── Hero ── */
+    .hero {
+      padding: 120px 0 140px;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-wordmark {
+      font-family: var(--serif);
+      font-size: clamp(72px, 10vw, 120px);
+      line-height: 1;
+      letter-spacing: -2px;
+      color: var(--navy);
+    }
+    .hero-tagline {
+      font-family: var(--serif);
+      font-size: clamp(24px, 3.5vw, 40px);
+      line-height: 1.2;
       letter-spacing: -0.5px;
       color: var(--navy);
-      margin-top: 48px;
+      margin-top: 24px;
+      max-width: 600px;
     }
-
-    h2 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 20px;
-      letter-spacing: -0.2px;
-      color: var(--navy);
-      margin-top: 40px;
-      padding-top: 20px;
-      border-top: 1px solid var(--border);
-    }
-
-    .section-number {
-      display: inline-block;
-      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-      font-size: 11px;
-      color: var(--text-dim);
-      letter-spacing: 1.2px;
-      margin-right: 8px;
-    }
-
-    p {
-      color: var(--text-mid);
-      margin-top: 14px;
-    }
-
-    p.lede {
+    .hero-sub {
       font-size: 17px;
+      line-height: 1.7;
+      color: var(--text-mid);
+      margin-top: 20px;
+      max-width: 520px;
+    }
+    .hero-cta {
+      display: inline-block;
+      margin-top: 48px;
+      padding: 16px 40px;
+      background: var(--navy);
+      color: #fff;
+      font-family: var(--sans);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .hero-cta:hover { background: var(--navy-mid); }
+
+    /* ── Section header ── */
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 56px;
+    }
+    .section-rule {
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+    .section-title {
+      font-family: var(--serif);
+      font-size: 32px;
+      letter-spacing: -0.3px;
       color: var(--navy);
-      margin-top: 24px;
+      white-space: nowrap;
     }
 
-    ul {
-      margin-top: 14px;
-      padding-left: 22px;
+    /* ── Features ── */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+    .feature-card {
+      background: var(--bg);
+      padding: 48px 36px;
+    }
+    .feature-icon {
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid var(--navy);
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+    .feature-title {
+      font-family: var(--serif);
+      font-size: 19px;
+      color: var(--navy);
+      letter-spacing: -0.2px;
+      margin-bottom: 10px;
+    }
+    .feature-desc {
+      font-size: 14px;
+      line-height: 1.6;
       color: var(--text-mid);
     }
-    ul li { margin-top: 6px; }
 
-    strong { color: var(--navy); font-weight: 600; }
-
-    a {
-      color: var(--navy);
-      text-decoration: underline;
-      text-underline-offset: 2px;
+    /* ── Pricing ── */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border: 1px solid var(--border);
     }
-    a:hover { color: var(--navy-mid); }
+    .pricing-col {
+      padding: 56px 48px;
+    }
+    .pricing-col:first-child {
+      border-right: 1px solid var(--border);
+    }
+    .pricing-col-pro {
+      background: var(--navy);
+      color: #fff;
+    }
+    .pricing-eyebrow {
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--text-dim);
+      margin-bottom: 8px;
+    }
+    .pricing-col-pro .pricing-eyebrow {
+      color: rgba(255,255,255,0.5);
+    }
+    .pricing-plan {
+      font-family: var(--serif);
+      font-size: 36px;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+    .pricing-price {
+      font-family: var(--mono);
+      font-size: 14px;
+      color: var(--text-mid);
+      margin-bottom: 32px;
+    }
+    .pricing-col-pro .pricing-price {
+      color: rgba(255,255,255,0.6);
+    }
+    .pricing-list {
+      list-style: none;
+      padding: 0;
+    }
+    .pricing-list li {
+      font-size: 14px;
+      line-height: 1.5;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border-light);
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+    }
+    .pricing-col-pro .pricing-list li {
+      border-bottom-color: rgba(255,255,255,0.1);
+    }
+    .pricing-check {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--navy);
+      flex-shrink: 0;
+    }
+    .pricing-col-pro .pricing-check {
+      color: #fff;
+    }
+    .pricing-cta {
+      display: inline-block;
+      margin-top: 36px;
+      padding: 14px 36px;
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .pricing-cta:hover { opacity: 0.85; }
+    .pricing-cta-free {
+      border: 1px solid var(--navy);
+      color: var(--navy);
+      background: transparent;
+    }
+    .pricing-cta-pro {
+      border: 1px solid #fff;
+      color: var(--navy);
+      background: #fff;
+    }
 
-    .callout {
-      margin-top: 24px;
-      padding: 16px 18px;
+    /* ── Screenshots ── */
+    .screenshots-row {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .phone-frame {
+      width: 220px;
+      height: 440px;
+      border: 1px solid var(--border);
       background: var(--bg-alt);
-      border-left: 2px solid var(--navy);
-      border-radius: 4px;
-      font-size: 15px;
-      color: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .phone-frame::before {
+      content: '';
+      position: absolute;
+      top: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 4px;
+      background: var(--border);
+    }
+    .phone-label {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
 
+    /* ── Footer ── */
     footer {
-      margin-top: 64px;
-      padding-top: 24px;
+      padding: 48px 0;
       border-top: 1px solid var(--border);
-      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-copy {
+      font-family: var(--mono);
       font-size: 10px;
       color: var(--text-dim);
       text-transform: uppercase;
       letter-spacing: 1.5px;
-      text-align: center;
+    }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+    .footer-links a {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--navy); }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .container { padding: 0 20px; }
+      section { padding: 64px 0; }
+
+      .hero { padding: 72px 0 80px; }
+      .hero-cta { padding: 14px 32px; }
+
+      .section-header { margin-bottom: 36px; }
+      .section-title { font-size: 24px; }
+
+      .features-grid { grid-template-columns: 1fr; }
+      .feature-card { padding: 32px 24px; }
+
+      .pricing-grid { grid-template-columns: 1fr; }
+      .pricing-col:first-child { border-right: none; border-bottom: 1px solid var(--border); }
+      .pricing-col { padding: 40px 28px; }
+
+      .screenshots-row { gap: 24px; }
+      .phone-frame { width: 180px; height: 360px; }
+
+      .footer-inner { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
 <body>
-  <main>
-    <div class="brand">BOE</div>
-    <div class="brand-tag">Back of Envelope</div>
 
-    <div class="meta">
-      <span>Effective 2026-04-16</span>
-      <span>NOIR Collective Ltd</span>
+  <!-- Nav -->
+  <nav>
+    <div class="container nav-inner">
+      <a href="/" class="nav-mark">BOE</a>
+      <span class="nav-tag">Multifamily Underwriting</span>
     </div>
+  </nav>
 
-    <h1>Privacy Policy</h1>
-
-    <p class="lede">
-      BOE is a local-only calculator. We do not collect, transmit, or sell
-      any personal data. There are no accounts, no analytics, and no tracking.
-    </p>
-
-    <div class="callout">
-      Everything you enter — deal assumptions, saved deals, exported files —
-      stays on your device unless you explicitly choose to share it.
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-wordmark">BOE</div>
+      <h1 class="hero-tagline">Back of envelope,<br />done fast.</h1>
+      <p class="hero-sub">
+        The fastest way to screen multifamily real estate deals. Levered IRR,
+        equity multiple, DSCR, and cash flows in seconds.
+      </p>
+      <a href="https://apps.apple.com" class="hero-cta">Download on the App Store</a>
     </div>
+  </section>
 
-    <h2><span class="section-number">01</span>Information We Collect</h2>
-    <p>
-      <strong>None.</strong> BOE does not require an account, does not ask for
-      your name, email, phone number, or any other personal information.
-      We do not include analytics, telemetry, crash reporting, advertising
-      identifiers, or usage tracking of any kind.
-    </p>
+  <!-- Features -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-rule"></div>
+        <h2 class="section-title">What You Get</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">01</div>
+          <h3 class="feature-title">Full Deal Underwriting</h3>
+          <p class="feature-desc">
+            Revenue, expenses, financing, exit assumptions — a complete
+            operating model from a single screen.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">02</div>
+          <h3 class="feature-title">Levered &amp; Unlevered IRR</h3>
+          <p class="feature-desc">
+            Newton-method IRR solver runs instantly. See both levered and
+            asset-level returns side by side.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">03</div>
+          <h3 class="feature-title">Sensitivity Analysis</h3>
+          <p class="feature-desc">
+            Heat-mapped 4&times;4 matrix across exit cap and rent growth.
+            Red to green — know where the deal breaks.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">04</div>
+          <h3 class="feature-title">Save &amp; Compare Deals</h3>
+          <p class="feature-desc">
+            Save unlimited deals. Select any number and compare side by side
+            in a scrollable table.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">05</div>
+          <h3 class="feature-title">Comp Averaging</h3>
+          <p class="feature-desc">
+            Select past deals, average their assumptions, and apply the
+            composite directly to a new analysis.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">06</div>
+          <h3 class="feature-title">PDF Export</h3>
+          <p class="feature-desc">
+            Generate a branded deal summary PDF and share it via any app
+            — email, Slack, AirDrop.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <h2><span class="section-number">02</span>How Your Data Is Stored</h2>
-    <p>
-      All deal inputs, saved deals, and user preferences are stored locally
-      on your device using Apple's secure on-device storage. This data never
-      leaves your device unless you take an explicit action — for example,
-      tapping <strong>Export Deals</strong> to share a JSON backup via the
-      system share sheet.
-    </p>
-    <p>
-      When you export, the resulting file is handled entirely by your device's
-      sharing system. We do not receive, intercept, or store a copy.
-    </p>
+  <!-- Pricing -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-rule"></div>
+        <h2 class="section-title">Free vs Pro</h2>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-col">
+          <div class="pricing-eyebrow">Free</div>
+          <div class="pricing-plan">BOE</div>
+          <div class="pricing-price">$0 forever</div>
+          <ul class="pricing-list">
+            <li><span class="pricing-check">+</span> Full calculator with every metric</li>
+            <li><span class="pricing-check">+</span> Year 1 operating summary</li>
+            <li><span class="pricing-check">+</span> Capital Stack &amp; Sources / Uses</li>
+            <li><span class="pricing-check">+</span> 3 saved deals</li>
+            <li><span class="pricing-check">+</span> JSON import / export</li>
+          </ul>
+          <a href="https://apps.apple.com" class="pricing-cta pricing-cta-free">Get Started</a>
+        </div>
+        <div class="pricing-col pricing-col-pro">
+          <div class="pricing-eyebrow">Pro</div>
+          <div class="pricing-plan">BOE Pro</div>
+          <div class="pricing-price">$14.99 /mo &nbsp;&middot;&nbsp; $99.99 /yr</div>
+          <ul class="pricing-list">
+            <li><span class="pricing-check">+</span> Everything in Free</li>
+            <li><span class="pricing-check">+</span> Year-by-year cash flow waterfall</li>
+            <li><span class="pricing-check">+</span> FFO / AFFO adjustments</li>
+            <li><span class="pricing-check">+</span> Sensitivity matrix heat map</li>
+            <li><span class="pricing-check">+</span> Deal comparison (unlimited)</li>
+            <li><span class="pricing-check">+</span> Comp averaging</li>
+            <li><span class="pricing-check">+</span> PDF export</li>
+            <li><span class="pricing-check">+</span> Unlimited saved deals</li>
+          </ul>
+          <a href="https://apps.apple.com" class="pricing-cta pricing-cta-pro">Upgrade to Pro</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <h2><span class="section-number">03</span>Subscriptions</h2>
-    <p>
-      BOE Pro subscriptions are processed and managed entirely by Apple
-      through the App Store. Apple handles all billing, payment information,
-      receipts, cancellations, and renewals according to its own
-      <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">
-        privacy policy
-      </a>.
-    </p>
-    <p>
-      BOE uses a third-party service, RevenueCat, solely to verify whether a
-      valid Pro subscription exists on your Apple ID. This verification uses
-      an anonymous identifier generated on your device and does not include
-      any personal information.
-    </p>
+  <!-- Screenshots -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-rule"></div>
+        <h2 class="section-title">On Your Phone</h2>
+      </div>
+      <div class="screenshots-row">
+        <div class="phone-frame">
+          <span class="phone-label">Screenshot 1</span>
+        </div>
+        <div class="phone-frame">
+          <span class="phone-label">Screenshot 2</span>
+        </div>
+        <div class="phone-frame">
+          <span class="phone-label">Screenshot 3</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <h2><span class="section-number">04</span>Third-Party Data Sharing</h2>
-    <p>
-      We do not share, sell, rent, or disclose any user data to third parties
-      for marketing, advertising, or any other purpose. Because we do not
-      collect data, there is nothing to share.
-    </p>
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <span class="footer-copy">&copy; 2026 NOIR Collective Ltd</span>
+      <div class="footer-links">
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Terms of Use</a>
+        <a href="mailto:support@noirmembers.com">Support</a>
+      </div>
+    </div>
+  </footer>
 
-    <h2><span class="section-number">05</span>Children's Privacy</h2>
-    <p>
-      BOE is a professional underwriting tool and is not directed at children
-      under the age of 13. Because we do not collect personal information from
-      any user, we do not knowingly collect information from children.
-    </p>
-
-    <h2><span class="section-number">06</span>Changes to This Policy</h2>
-    <p>
-      We may update this policy from time to time. When we do, we will revise
-      the effective date at the top of this page. Material changes that affect
-      how your data is handled will be communicated within the app.
-    </p>
-
-    <h2><span class="section-number">07</span>Contact</h2>
-    <p>
-      Questions about this policy can be directed to
-      <a href="mailto:support@noirmembers.com">support@noirmembers.com</a>.
-    </p>
-
-    <h2><span class="section-number">08</span>Support</h2>
-    <p>
-      For app support, bug reports, or feature requests, email
-      <a href="mailto:support@noirmembers.com">support@noirmembers.com</a>.
-      Include your iOS version and a brief description of the issue.
-      We aim to respond within 48 hours.
-    </p>
-    <p>
-      To manage or cancel your BOE Pro subscription, go to
-      <strong>Settings → Apple ID → Subscriptions</strong> on your device.
-    </p>
-
-    <footer>
-      © 2026 NOIR Collective Ltd
-    </footer>
-  </main>
 </body>
 </html>
