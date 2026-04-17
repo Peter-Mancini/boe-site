@@ -61,11 +61,20 @@
       align-items: center;
     }
     .nav-mark {
+      display: flex;
+      align-items: center;
+      gap: 12px;
       font-family: var(--serif);
       font-size: 22px;
       color: var(--navy);
       text-decoration: none;
       letter-spacing: -0.5px;
+    }
+    .nav-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 22%;
+      display: block;
     }
     .nav-tag {
       font-family: var(--mono);
@@ -289,10 +298,17 @@
       flex-wrap: wrap;
     }
     .phone-frame {
-      width: 240px;
-      border: 1px solid var(--border);
-      background: var(--bg);
+      width: 260px;
+      padding: 10px;
+      background: #1a1a1a;
+      border-radius: 48px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+      display: block;
+    }
+    .phone-screen {
+      border-radius: 40px;
       overflow: hidden;
+      background: var(--bg);
       display: block;
     }
     .phone-frame img {
@@ -368,7 +384,8 @@
       .pricing-col { padding: 40px 28px; }
 
       .screenshots-row { gap: 24px; }
-      .phone-frame { width: 200px; }
+      .phone-frame { width: 220px; padding: 8px; border-radius: 40px; }
+      .phone-screen { border-radius: 34px; }
 
     }
   </style>
@@ -378,7 +395,10 @@
   <!-- Nav -->
   <nav>
     <div class="container nav-inner">
-      <a href="/" class="nav-mark">BOE</a>
+      <a href="/" class="nav-mark">
+        <img src="/icon.png" alt="BOE app icon" class="nav-icon" />
+        <span>BOE</span>
+      </a>
       <span class="nav-tag">Multifamily Underwriting</span>
     </div>
   </nav>
@@ -387,12 +407,12 @@
   <section class="hero">
     <div class="container">
       <div class="hero-wordmark">BOE</div>
-      <h1 class="hero-tagline">Back of envelope,<br />done fast.</h1>
+      <h1 class="hero-tagline">The back of the envelope,<br />now on your phone.</h1>
       <p class="hero-sub">
         The fastest way to screen multifamily real estate deals. Levered IRR,
         equity multiple, DSCR, and cash flows in seconds.
       </p>
-      <span class="hero-cta hero-cta-disabled">Coming to the App Store</span>
+      <span class="hero-cta hero-cta-disabled">Download on the App Store</span>
     </div>
   </section>
 
@@ -475,7 +495,6 @@
             <li><span class="pricing-check">+</span> 3 saved deals</li>
             <li><span class="pricing-check">+</span> JSON import / export</li>
           </ul>
-          <span class="pricing-cta pricing-cta-free pricing-cta-disabled">Coming Soon</span>
         </div>
         <div class="pricing-col pricing-col-pro">
           <div class="pricing-eyebrow">Pro</div>
@@ -506,19 +525,25 @@
       <div class="screenshots-row">
         <div class="phone-wrap">
           <div class="phone-frame">
-            <img src="assets/calculator.png" alt="BOE calculator home screen showing L-IRR, Unlevered IRR, Equity Multiple, and Total Profit" />
+            <div class="phone-screen">
+              <img src="assets/calculator.png" alt="BOE calculator home screen showing L-IRR, Unlevered IRR, Equity Multiple, and Total Profit" />
+            </div>
           </div>
           <div class="phone-caption">Calculator</div>
         </div>
         <div class="phone-wrap">
           <div class="phone-frame">
-            <img src="assets/sensitivity.png" alt="BOE Pro sensitivity matrix — Levered IRR heat map across exit cap and rent growth" />
+            <div class="phone-screen">
+              <img src="assets/sensitivity.png" alt="BOE Pro sensitivity matrix — Levered IRR heat map across exit cap and rent growth" />
+            </div>
           </div>
           <div class="phone-caption">Sensitivity</div>
         </div>
         <div class="phone-wrap">
           <div class="phone-frame">
-            <img src="assets/comps.png" alt="BOE Saved Deals with Comp Average preview and Apply to Calculator button" />
+            <div class="phone-screen">
+              <img src="assets/comps.png" alt="BOE Saved Deals with Comp Average preview and Apply to Calculator button" />
+            </div>
           </div>
           <div class="phone-caption">Historical Pre-fill</div>
         </div>
