@@ -117,6 +117,12 @@
       transition: background 0.2s;
     }
     .hero-cta:hover { background: var(--navy-mid); }
+    .hero-cta-disabled {
+      cursor: default;
+      opacity: 0.6;
+      background: var(--navy);
+    }
+    .hero-cta-disabled:hover { background: var(--navy); }
 
     /* ── Section header ── */
     .section-header {
@@ -257,6 +263,11 @@
       transition: opacity 0.2s;
     }
     .pricing-cta:hover { opacity: 0.85; }
+    .pricing-cta-disabled {
+      cursor: default;
+      opacity: 0.6;
+    }
+    .pricing-cta-disabled:hover { opacity: 0.6; }
     .pricing-cta-free {
       border: 1px solid var(--navy);
       color: var(--navy);
@@ -379,7 +390,7 @@
         The fastest way to screen multifamily real estate deals. Levered IRR,
         equity multiple, DSCR, and cash flows in seconds.
       </p>
-      <a href="https://apps.apple.com" class="hero-cta">Download on the App Store</a>
+      <span class="hero-cta hero-cta-disabled">Coming to the App Store</span>
     </div>
   </section>
 
@@ -462,7 +473,7 @@
             <li><span class="pricing-check">+</span> 3 saved deals</li>
             <li><span class="pricing-check">+</span> JSON import / export</li>
           </ul>
-          <a href="https://apps.apple.com" class="pricing-cta pricing-cta-free">Get Started</a>
+          <span class="pricing-cta pricing-cta-free pricing-cta-disabled">Coming Soon</span>
         </div>
         <div class="pricing-col pricing-col-pro">
           <div class="pricing-eyebrow">Pro</div>
@@ -478,7 +489,7 @@
             <li><span class="pricing-check">+</span> PDF export</li>
             <li><span class="pricing-check">+</span> Unlimited saved deals</li>
           </ul>
-          <a href="https://apps.apple.com" class="pricing-cta pricing-cta-pro">Upgrade to Pro</a>
+          <span class="pricing-cta pricing-cta-pro pricing-cta-disabled">Coming Soon</span>
         </div>
       </div>
     </div>
