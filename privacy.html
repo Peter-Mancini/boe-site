@@ -140,12 +140,28 @@
       letter-spacing: 1.5px;
       text-align: center;
     }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 32px;
+      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 10px;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--navy); }
   </style>
 </head>
 <body>
   <main>
-    <div class="brand">BOE</div>
-    <div class="brand-tag">Back of the Envelope</div>
+    <a href="/" class="back-link">← Back to home</a>
+    <a href="/" style="text-decoration:none;color:inherit;">
+      <div class="brand">BOE</div>
+      <div class="brand-tag">Back of the Envelope</div>
+    </a>
 
     <div class="meta">
       <span>Effective 2026-04-16</span>
