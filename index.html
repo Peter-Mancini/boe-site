@@ -276,31 +276,29 @@
       flex-wrap: wrap;
     }
     .phone-frame {
-      width: 220px;
-      height: 440px;
+      width: 240px;
       border: 1px solid var(--border);
-      background: var(--bg-alt);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
+      background: var(--bg);
+      overflow: hidden;
+      display: block;
     }
-    .phone-frame::before {
-      content: '';
-      position: absolute;
-      top: 14px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 50px;
-      height: 4px;
-      background: var(--border);
+    .phone-frame img {
+      width: 100%;
+      display: block;
     }
-    .phone-label {
+    .phone-caption {
       font-family: var(--mono);
       font-size: 10px;
       color: var(--text-dim);
       text-transform: uppercase;
       letter-spacing: 2px;
+      text-align: center;
+      margin-top: 16px;
+    }
+    .phone-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     /* ── Footer ── */
@@ -356,7 +354,7 @@
       .pricing-col { padding: 40px 28px; }
 
       .screenshots-row { gap: 24px; }
-      .phone-frame { width: 180px; height: 360px; }
+      .phone-frame { width: 200px; }
 
       .footer-inner { flex-direction: column; align-items: flex-start; }
     }
@@ -494,14 +492,23 @@
         <h2 class="section-title">On Your Phone</h2>
       </div>
       <div class="screenshots-row">
-        <div class="phone-frame">
-          <span class="phone-label">Screenshot 1</span>
+        <div class="phone-wrap">
+          <div class="phone-frame">
+            <img src="assets/calculator.png" alt="BOE calculator home screen showing L-IRR, Unlevered IRR, Equity Multiple, and Total Profit" />
+          </div>
+          <div class="phone-caption">Calculator</div>
         </div>
-        <div class="phone-frame">
-          <span class="phone-label">Screenshot 2</span>
+        <div class="phone-wrap">
+          <div class="phone-frame">
+            <img src="assets/sensitivity.png" alt="BOE Pro sensitivity matrix — Levered IRR heat map across exit cap and rent growth" />
+          </div>
+          <div class="phone-caption">Sensitivity</div>
         </div>
-        <div class="phone-frame">
-          <span class="phone-label">Screenshot 3</span>
+        <div class="phone-wrap">
+          <div class="phone-frame">
+            <img src="assets/comps.png" alt="BOE Saved Deals with Comp Average preview and Apply to Calculator button" />
+          </div>
+          <div class="phone-caption">Comp Averaging</div>
         </div>
       </div>
     </div>
