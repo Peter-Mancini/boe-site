@@ -30,6 +30,45 @@
       -webkit-font-smoothing: antialiased;
     }
 
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    nav {
+      padding: 28px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-mark {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 22px;
+      color: var(--navy);
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+    .nav-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 22%;
+      display: block;
+    }
+    .nav-tag {
+      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 10px;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
     main { max-width: 680px; margin: 0 auto; padding: 64px 24px 96px; }
 
     .back-link {
@@ -44,34 +83,6 @@
       transition: color 0.2s;
     }
     .back-link:hover { color: var(--navy); }
-
-    .brand {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 28px;
-      letter-spacing: -0.5px;
-      color: var(--navy);
-    }
-    .brand-tag {
-      font-size: 10px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: var(--text-dim);
-      margin-top: 2px;
-    }
-
-    .meta {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-      font-size: 11px;
-      color: var(--text-dim);
-      text-transform: uppercase;
-      letter-spacing: 1.2px;
-      margin-top: 24px;
-      padding-bottom: 16px;
-      border-bottom: 2px solid var(--navy);
-    }
 
     h1 {
       font-family: Georgia, "Times New Roman", serif;
@@ -135,17 +146,19 @@
   </style>
 </head>
 <body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a href="/" class="nav-mark">
+        <img src="/icon.png" alt="BOE app icon" class="nav-icon" />
+        <span>BOE</span>
+      </a>
+      <span class="nav-tag">Multifamily Underwriting</span>
+    </div>
+  </nav>
+
   <main>
     <a href="/" class="back-link">← Back to home</a>
-    <a href="/" style="text-decoration:none;color:inherit;">
-      <div class="brand">BOE</div>
-      <div class="brand-tag">Back of the Envelope</div>
-    </a>
-
-    <div class="meta">
-      <span>Effective 2026-04-17</span>
-      <span>NOIR Collective Ltd</span>
-    </div>
 
     <h1>Disclosures</h1>
 
